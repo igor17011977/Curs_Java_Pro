@@ -1,5 +1,3 @@
 Gain knowledge sufficient to write programs in Java
 First change
 Second change
-Rebase_01
-Rebase_02
