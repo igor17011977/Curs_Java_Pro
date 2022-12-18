@@ -24,7 +24,7 @@ public class Main {
                 if (answer.equals("yes")){
                     System.out.println("Participant "+name+" passed the obstacle "+obstacle+" at the distance "+k);
                 }
-                else {System.out.println("Participant "+name+" no passed the obstacle "+obstacle+" at the distance "+k+" Passed "+(k-1));
+                else {System.out.println("Participant "+name+" no passed the obstacle "+obstacle+" at the distanc "+k+" Passed "+(k-1));
                 break;}
             }
         }
