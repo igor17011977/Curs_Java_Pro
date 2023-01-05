@@ -1,0 +1,7 @@
+{
+  "FILE": "FileLog",
+  "PATCH": "/home/igor/IdeaProjects/Curs_Java_Pro/src/dz08/",
+  "LEVEL":"DEBUG",
+  "MAX-SIZE": 500,
+  "FORMAT": "txt"
+}
