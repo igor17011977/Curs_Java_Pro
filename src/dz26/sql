@@ -1,0 +1,14 @@
+1
+select * from classicmodels.offices where officeCode in ( 4,5,6,7);
+select * from classicmodels.offices where officeCode=4 or officeCode=5 or officeCode=6 or officeCode=7;
+select * from classicmodels.offices where officeCode>3 and officeCode<8;
+2
+select * from  classicmodels.products where productName like '%1936%';
+3
+from classicmodels.products where productScale='1:24' and (productVendor="Motor City Art Classics" or productVendor='Exoto Designs');
+4
+SELECT * FROM classicmodels.orders where shippedDate is Null;
+5
+SELECT * FROM classicmodels.offices order by city desc;
+6
+SELECT * FROM classicmodels.employees order by firstName;
