@@ -1,0 +1,28 @@
+1
+SELECT * FROM classicmodels.employees
+left join customers on customers.salesRepEmployeeNumber=employees.employeeNumber
+where customers.country='Paris' or customers.country="Tokio";
+2
+SELECT  employees.firstName, employees.lastName, count(customers.salesRepEmployeeNumber) as  supported FROM classicmodels.employees
+left join customers on customers.salesRepEmployeeNumber=employees.employeeNumber
+group by  employees.firstName, employees.lastName;
+3
+SELECT * FROM classicmodels.employees a
+where a.reportsTo=1102;
+4
+SELECT  employees.firstName, employees.lastName, count(customers.salesRepEmployeeNumber) as  supported FROM classicmodels.employees
+left join customers on customers.salesRepEmployeeNumber=employees.employeeNumber
+group by  employees.firstName, employees.lastName
+having supported<5;
+5
+SELECT  * FROM employees a
+left join customers b on b.salesRepEmployeeNumber=a.employeeNumber
+where b.customerNumber in (SELECT c.customerNumber FROM classicmodels.orders c
+where c.status='Cancelled') ;
+6
+SELECT  a.firstName, a.lastName, count(*) as Best FROM classicmodels.employees a
+left join customers b on b.salesRepEmployeeNumber=a.employeeNumber
+where b.customerNumber in (SELECT c.customerNumber FROM classicmodels.orders c
+where c.status='Shipped')
+group by  a.firstName, a.lastName
+order by Best desc;
