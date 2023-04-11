@@ -1,0 +1,9 @@
+1
+insert into classicmodels.customers values (497,"System Shop","Kristian","Tony","+6493355500","Arenales 53",NULL,"Auckland",NULL,NULL,"USA",1165,110000.00);
+insert into classicmodels.orders values (10426,"2023-01-05","2023-06-07",NULL,"In Process",NULL,497);
+insert into classicmodels.orderdetails values (10426, 'S10_2016', 30, 200, 3);
+2
+update classicmodels.customers set customers.customerName=concat(customers.customerName," Superstar")
+where customerNumber  IN (SELECT a.customerNumber FROM classicmodels.orders as a
+group by a.customerNumber
+having count(a.customerNumber)>10);
